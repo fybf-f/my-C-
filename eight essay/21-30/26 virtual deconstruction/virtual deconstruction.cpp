@@ -54,5 +54,10 @@ int main(int args, char *argv[])
     f->print("aaa");
     // 销毁堆区对象需要使用delete才会调用虚析构函数
     delete f;
+    cout << "===============" << endl;
+    // 创建栈区对象,栈区对象在超出作用域后，编译器会自动调用析构函数
+    Child c;
+    Father *fp = &c;
+
     return 0;
 }
