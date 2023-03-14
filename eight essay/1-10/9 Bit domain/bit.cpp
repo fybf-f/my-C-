@@ -11,7 +11,7 @@ using namespace std;
 class test
 {
 public:
-    // 该int类型的属性只有1位，比原int节省31个字节
+    // 该int类型的属性只有1位，比原int节省31位
     int sex : 1;  
 };
 
