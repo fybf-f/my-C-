@@ -1,23 +1,20 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 
-typedef struct Test
+void func(int* ptr)
 {
+    printf("这个是int*作为参数的函数\n");
+}
 
-    int b : 1;
-    char a;
-
-}Test;
-
-int main(int args, char *argv[])
+void func(int p)
 {
+    printf("这个是int作为参数的函数\n");
+}
 
-    printf("%d\n", sizeof(Test));
-    char chr = 127;
-    int sum = 200;
-    chr += 1;
-    sum += chr;
-    printf("%d\n", sum);
+int main(int args, char* argv[]) 
+{
+    printf("-----------------\n");
+    int i;
+    int *p = &i;
+    // func(NULL);
     return 0;
 }
