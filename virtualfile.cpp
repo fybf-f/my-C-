@@ -1,15 +1,23 @@
 #include <iostream>
-#include <unordered_map>
+
 using namespace std;
 
-namespace lzh
-{
-    int a = 10;
-};
+const int MAX = 4;
+
+
 
 int main(int args, char* argv[]) 
 {
-    cout << lzh::a << endl;
-    int b = (((((((0)))))));
+    cout <<" --------------" <<endl;
+    char *names[MAX] = {
+        "Zara Ali",
+        "Hina Ali",
+        "Nuha Ali",
+        "Sara Ali",
+    };
+    for (int i = 0; i < MAX; ++i)
+    {
+        cout << names[i] << endl;
+    }
     return 0;
 }
