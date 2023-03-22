@@ -4,16 +4,15 @@
 #include <cstring>
 using namespace std;
 
-class Test
+union U
 {
-public:
-    int id;
-    const static void fun() {}
+    int a ;
+    char c = 1;
 };
-
 int main(int args, char *argv[])
 {
     cout << " --------------" << endl;
-    Test t;
+    U u;
+    cout << u.a << endl;
     return 0;
 }

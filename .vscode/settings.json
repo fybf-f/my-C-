@@ -39,5 +39,42 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp"
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    // "entity.name.type.class",
+                    // "constant",
+                    "storage",
+                    "keyword",
+                    "string"
+                ],
+                "settings": {
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": [
+                    "comment.line" // 设置单行注释
+                ],
+                "settings": {
+                    "fontStyle": "bold underline", // 
+                    "foreground": "#d2ef2c"
+                }
+            },
+            {
+                "scope": [
+                    "comment.block",  // 设置多行注释
+                    "head"
+                ],
+                "settings": {
+                    "fontStyle": "bold", // bold italic underline 
+                    // 设置字体颜色
+                    // "foreground": "#4caee2"
+                    "foreground": "#d2ef2c"
+                }
+            }
+        ],
     }
 }
