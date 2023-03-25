@@ -1,21 +1,4 @@
-#include <iostream>
-#include <vector>
-using namespace std;
-void swap(int &a, int &b)
-{
-    int temp = b;
-    b = a;
-    a = temp;
-}
-
-void print(vector<int> vec)
-{
-    for (int i : vec)
-    {
-        cout << i << " ";
-    }
-    cout << endl;
-}
+#include "output.h"
 
 void select_sort(vector<int> &vec)
 {

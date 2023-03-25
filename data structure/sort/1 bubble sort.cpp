@@ -1,15 +1,4 @@
-#include <vector>
-#include <iostream>
-using std::cout;
-using std::endl;
-using std::vector;
-
-void swap(int &a, int &b)
-{
-    int temp = b;
-    b = a;
-    a = temp;
-}
+#include "output.h"
 
 void bubble_sort(vector<int> &vec)
 {
@@ -41,9 +30,6 @@ int main(int argc, char *argv[])
     cout << "--------" << endl;
     vector<int> nums = {6, 1, 4, 3, 2, 10, 7, 5, 11, 9};
     bubble_sort(nums);
-    for (int i : nums)
-    {
-        cout << i << " ";
-    }
-    char *ptr = "abcd";
+    print(nums);
+    return 0;
 }

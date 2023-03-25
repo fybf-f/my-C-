@@ -1,18 +1,7 @@
-#include <iostream>
-#include <vector>
-using namespace std;
+#include "output.h"
 
 
-void print(vector<int> vec)
-{
-    for (int i : vec)
-    {
-        cout << i << " ";
-    }
-    cout << endl;
-}
-
-void insert_sort(vector<int>& vec)
+void insert_sort(vector<int> &vec)
 {
     int len = vec.size();
     if (len == 0)
@@ -30,14 +19,13 @@ void insert_sort(vector<int>& vec)
             if (vec[left] > temp)
             {
                 vec[left + 1] = vec[left];
-            } 
+            }
             else
-                break;  // 找到位置时，left不能继续--
+                break; // 找到位置时，left不能继续--
         }
         vec[left + 1] = temp;
     }
 }
-
 
 int main(int args, char *argv[])
 {

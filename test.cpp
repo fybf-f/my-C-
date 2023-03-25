@@ -1,50 +1,26 @@
 #include <vector>
 #include <iostream>
-using std::cout;
-using std::endl;
-using std::vector;
+using namespace std;
 
-void swap(int& a, int& b)
+vector<int> fun1(int num)
 {
-    int temp = b;
-    b = a;
-    a = temp;
+    vector<int> values;
+    for (int j = 0; j < num; j++)
+    {
+        values.push_back(j);
+    }
+    return values;
 }
 
-void bubble_sort(vector<int> &vec)
+int main()
 {
-    if(vec.empty())
+    vector<int> myvector;
+    int i;
+    myvector = fun1(10);
+    cout << endl;
+    for (int m = 0; m < myvector.size(); m++)
     {
-        return ;
+        cout << myvector[m] << endl;
     }
-    int len = vec.size();
-    for (int i = 0; i < len; ++i)
-    {
-        bool flag = true;
-        for (int j = 1; j < len - i; ++j)
-        {        
-            if(vec[j] < vec[j - 1])
-            {
-                swap(vec[j], vec[j - 1]);
-                flag = false;
-            }            
-        }
-        if (flag)
-        {
-            return ;
-        }
-    }
-}
-
-
-int main(int argc, char *argv[])
-{
-    cout << "--------" << endl;
-    vector<int> nums = {6, 1, 4, 3, 2, 10, 7, 5, 11, 9};
-    bubble_sort(nums);
-    for(int i : nums)
-    {
-        cout << i << " ";
-    }
-    char *ptr = "abcd";
+    return 0;
 }
