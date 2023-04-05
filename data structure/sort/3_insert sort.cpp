@@ -1,6 +1,5 @@
 #include "output.h"
 
-
 void insert_sort(vector<int> &vec)
 {
     int len = vec.size();

@@ -2,6 +2,9 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
+#include <pthread.h>
+#include <sys/socket.h>
+
 using namespace std;
 
 union U
@@ -11,8 +14,6 @@ union U
 };
 int main(int args, char *argv[])
 {
-    cout << " --------------" << endl;
-    U u;
-    cout << u.a << endl;
+    // system("pause");
     return 0;
 }

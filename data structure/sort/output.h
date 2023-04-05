@@ -2,6 +2,7 @@
 #include <vector>
 #include <random>
 #include <ctime>
+#include <climits>
 // #include <algorithm>
 // #include <iterator>
 using std::cout;
@@ -28,15 +29,13 @@ void print(vector<int> vec)
 }
 
 default_random_engine e;
-uniform_int_distribution<int> u(0, 20);
+uniform_int_distribution<int> u(0, 30);
 
-void create_vec(vector<int>& nums)
+void create_vec(vector<int> &nums)
 {
     e.seed(time(0));
     for (int &i : nums)
     {
         i = u(e);
     }
-    
 }
-

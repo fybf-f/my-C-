@@ -23,6 +23,10 @@ void heap_sort(vector<int>& vec)
     // 将最值放在数组中的最后面，重新构造堆结构就行
     for (int i = len - 1; i >= 0; --i)
     {
+        /*
+            在这个交换中只会破坏一侧的子树（破坏了包含下标为i的那一侧子树）
+            类似于选择排序，每一次将一个最值放在数组最后面
+        */
         swap(vec[0], vec[i]);
         adjust(vec, 0, i - 1);
     }
@@ -46,8 +50,9 @@ void adjust(vector<int>& vec, int father, int end)
             // 改变根节点
             swap(vec[child], vec[father]);
             // 回溯子树
-            father = child;
-            child = 2 * father + 1;
+            // father = child;
+            // child = 2 * father + 1;
+            adjust(vec, child, end);  // 递归也可以
         }
         else 
         {
